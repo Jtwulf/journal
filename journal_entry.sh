@@ -5,11 +5,11 @@ year=$(date +%Y)
 month=$(date +%m)
 day=$(date +%d)
 date_string="$year-$month-$day"
-file_path=~/Documents/justin/journal/$year/$month/$date_string.txt
+file_path=~/Documents/justin/personal/journal/$year/$month/$date_string.txt
 
 if [ -e "$file_path" ]; then
     echo "File $file_path already exists."
-    vim "$file_path" +10 # Adjust line number if necessary
+    vim "$file_path" +9
 else
     mkdir -p $(dirname "$file_path")
     touch "$file_path"
