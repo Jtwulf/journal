@@ -1,14 +1,19 @@
 #!/bin/zsh
 
+header=$(./create_header.sh)
 year=$(date +%Y)
 month=$(date +%m)
-day=$(date +%Y%m%d)
-date_string="$year/$month/$(date +%d)"
+day=$(date +%d)
+date_string="$year-$month-$day"
+file_path=~/Documents/justin/journal/$year/$month/$date_string.txt
 
-mkdir -p ~/Documents/justin/journal/$year/$month
-touch ~/Documents/justin/journal/$year/$month/$day.txt
-echo "~/Documents/justin/journal/$year/$month/$day.txt is created."
-
-echo "$date_string - JustinWulf\n\n" > ~/Documents/justin/journal/$year/$month/$day.txt
-vim ~/Documents/justin/journal/$year/$month/$day.txt +3
-
+if [ -e "$file_path" ]; then
+    echo "File $file_path already exists."
+    vim "$file_path" +10 # Adjust line number if necessary
+else
+    mkdir -p $(dirname "$file_path")
+    touch "$file_path"
+    echo "$header" >> "$file_path"
+    echo "\n" >> "$file_path"
+    vim "$file_path" +9
+fi
