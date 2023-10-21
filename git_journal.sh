@@ -12,8 +12,7 @@ git secret add "$year/$month/$date_string.txt"
 git secret hide
 
 git add "$year/$month/$date_string.txt.secret"
-# git commit -m "Journal entry for $date_string"
-git commit -m "Journal entry for test1"
+git commit -m "Journal entry for $date_string"
 git push origin main
 
 echo "Journal entry for $date_string is committed and pushed to main branch."
