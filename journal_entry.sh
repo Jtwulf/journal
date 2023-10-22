@@ -1,10 +1,22 @@
 #!/bin/zsh
 
-header=$(./create_header.sh)
 year=$(date +%Y)
 month=$(date +%m)
 day=$(date +%d)
-date_string="$year-$month-$day"
+time=$(date +%H:%M)
+day_of_week=$(date +%A)
+user=$(whoami)
+
+date_string="$year-$month-$day $time ($day_of_week)"
+
+header="/* *************************************************** */\n"
+header+="/*                                                     */\n"
+header+="/*   $date_string                         */\n"
+header+="/*                                                     */\n"
+header+="/*   By: $user                                    */\n"
+header+="/*                                                     */\n"
+header+="/* *************************************************** */\n"
+
 file_path=~/Documents/justin/personal/journal/$year/$month/$date_string.txt
 
 if [ -e "$file_path" ]; then
