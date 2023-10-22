@@ -7,17 +7,18 @@ time=$(date +%H:%M)
 day_of_week=$(date +%A)
 user=$(whoami)
 
-date_string="$year-$month-$day $time ($day_of_week)"
+date_string_long="$year-$month-$day $time ($day_of_week)"
+date_string_short="$year-$month-$day"
 
 header="/* *************************************************** */\n"
 header+="/*                                                     */\n"
-header+="/*   $date_string                         */\n"
+header+="/*   $date_string_long                         */\n"
 header+="/*                                                     */\n"
 header+="/*   By: $user                                    */\n"
 header+="/*                                                     */\n"
 header+="/* *************************************************** */\n"
 
-file_path=~/Documents/justin/personal/journal/$year/$month/$date_string.txt
+file_path=~/Documents/justin/personal/journal/$year/$month/$date_string_short.txt
 
 if [ -e "$file_path" ]; then
     echo "File $file_path already exists."
