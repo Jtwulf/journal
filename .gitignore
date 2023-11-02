@@ -1,6 +1,6 @@
 .gitsecret/keys/random_seed
 !*.secret
-.gitginore
+.gitignore
 2023/10/2023-10-21.txt
 2023/10/2023-10-22.txt
 2023/10/2023-10-23.txt
