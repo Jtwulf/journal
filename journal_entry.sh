@@ -18,7 +18,7 @@ header+="/*   By: $user                                    */\n"
 header+="/*                                                     */\n"
 header+="/* *************************************************** */\n"
 
-file_path=~/Documents/justin/personal/journal/$year/$month/$date_string_short.txt
+file_path=~/Documents/justin/personal/journal/src/$year/$month/$date_string_short.txt
 
 if [ -e "$file_path" ]; then
     echo "File $file_path already exists."
