@@ -17,7 +17,7 @@ header+="/*                                                     */\n"
 header+="/*   By: $user                                    */\n"
 header+="/*                                                     */\n"
 header+="/* *************************************************** */\n\n"
-header+="# Today's Schedule\n\n\n\n# Today's Goal\n\n\n\n# Journal"
+header+="# Today's Schedule (or Tomorrow's Schedule)\n\n\n\n# Today's Goal (or Tomorrow's Goal)\n\n\n\n# Journal"
 
 file_path=~/Documents/justin/personal/journal/src/$year/$month/$date_string_short.txt
 
